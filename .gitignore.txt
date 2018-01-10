@@ -1,0 +1,5 @@
+#ignore file named 'metadata'
+.metadata/
+
+#ignore all zip files
+*.zip
