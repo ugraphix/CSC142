@@ -1,16 +1,14 @@
+/*
+ * Author: Grace Eder
+ * Title: Homework 1
+ * Created: 1/4/2018
+ * Notes: A histogram showing data from a voter participation document
+ * Histogram Key: T=total people of voting age, R=number of registered voters, V=actual votes made
+ *  
+ */
+
 
 public class Histogram {
-
-	/*
-	 * Author: Grace Eder
-	 * Title: Homework 1
-	 * Created: 1/4/2018
-	 * Notes: A histogram showing data from a voter participation document
-	 * Histogram Key: T=total people of voting age, R=number of registered voters, V=actual votes made
-	 *  
-	 */
-
-
 	//Create a constant for the scaleFactor argument.
 	//Use a scale for the chart to create bars in the appropriate size.
 	static final int SCALE_FACTOR = 100000;
