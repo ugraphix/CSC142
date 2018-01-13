@@ -68,7 +68,7 @@ public class API {
 		
 		//More searching through the API
 		//Write a statement to instantiate a Point object with coordinates (3, 4) and binding it to an appropriate reference variable.
-		Point firstPoint = new Point();
+		Point firstPoint = new Point(3,4);
 		Point secondPoint = new Point(firstPoint);
 
 		System.out.println("secondPoint is located at: " + firstPoint);
