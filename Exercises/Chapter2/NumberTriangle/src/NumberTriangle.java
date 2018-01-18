@@ -18,15 +18,30 @@ public class NumberTriangle {
 	
 	{ 
 		 
-			System.out.println( padString( "hello", 8) + "END" ); 
-			System.out.println( padString( "Congratulations", 10)); 
-			} 
-			public static String padString(String s, int n) 
-			{ 
-			for(int i = s.length(); i<n; i++) 
-			s+=" "; 
-			return s; 
+		public class Strange{
+
+			public static final int MAX = 5;
+
+			public static void unknown(){
+
+			int number = 0;
+
+			for (int i = MAX; i >= 1; i--)
+
+			number += i * i;
+
+			System.out.println(number);
+
 			}
+
+			public static void main(String[] a){
+
+			unknown();
+
+			}
+
+			}
+	}
 		 
 	}
 
