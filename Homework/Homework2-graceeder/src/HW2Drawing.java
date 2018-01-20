@@ -1,25 +1,29 @@
+/*
+ * Grace Eder
+ *  HW2 Draw Curves from Straight Lines
+ *  Notes:	Part1- create shapes from lines 
+ *  		Part2- create filled objects and patterns
+ */
+
+
 import java.awt.Graphics;
 import java.awt.Color;
 import java.util.Random;
 
-import com.sun.javafx.geom.Line2D;
 
 public class HW2Drawing {
 	//constant for the panel size in case someone wants to change the size
 	static final int PANEL1_SIZE = 500;
-	static final int PANEL2_SIZE = 800;
+	static final int PANEL2_SIZE = 400;
 	static final int LINE_INCREMENT=5;
 
-
+	//main calls the functions/methods of part1 and part 2
 	public static void main(String[] args) {
 		part1();
 		part2();
-
-
 	}
 
-
-	//create method for part 1 of the assignment, Graphics line, 
+	//create method for part 1 of the assignment
 	public static void part1(){
 		DrawingPanel panel = new DrawingPanel (PANEL1_SIZE ,PANEL1_SIZE );
 		//create 'paint-brush' line for drawing
@@ -61,8 +65,6 @@ public class HW2Drawing {
 		}
 	}
 
-
-
 	//create method for part 2 of the assignment
 	public static void part2() {
 		//create panel for drawings
@@ -77,13 +79,16 @@ public class HW2Drawing {
 		oval(pb, 100, 0);
 		polygon(pb, 200,0);
 
-
+		//create for loop to loop through set of shapes 3 times
 		for (int k=0; k<=120;k=k+40) {
+			//create loop to have polygon2 repeat 
 			for (int i=0; i<=PANEL2_SIZE; i=i+40) {
 				//set fill color
 				pb.setColor(Color.RED);
 				polygon2(pb, i,200+k);
-			}for (int j=0; j<=PANEL2_SIZE; j=j+40) {
+			}
+			//create loop to have polygon2 repeat 
+			for (int j=0; j<=PANEL2_SIZE; j=j+40) {
 				//set fill color
 				pb.setColor(Color.ORANGE);
 				polygon3(pb, j,200+k);
@@ -91,7 +96,12 @@ public class HW2Drawing {
 		}
 	}
 
-
+	/**
+	 * rectangle draws a rectangle at custom coordinates
+	 * @param pb graphics object to draw
+	 * @param a x coordinate of top left corner of shape
+	 * @param b y coordinate of top left corner of shape
+	 */
 	public static void rectangle(Graphics pb, int a,  int b ) {
 		//draw rectangle
 		//set fill color
@@ -100,7 +110,13 @@ public class HW2Drawing {
 		pb.fillRect(a, b, a+40, b+150);
 	}
 
-
+	/**
+	 * 
+	 * triangle draws a triangle at custom coordinates
+	 * @param pb graphics object to draw
+	 * @param a x coordinate of top left corner of shape
+	 * @param b y coordinate of top left corner of shape
+	 */
 	public static void triangle(Graphics pb, int a, int b) {
 		//draw triangle
 		//set line color
@@ -111,6 +127,13 @@ public class HW2Drawing {
 		pb.drawLine(a,b,a,b+150 );
 	}
 
+
+	/**
+	 * oval draws a oval at custom coordinates
+	 * @param pb graphics object to draw
+	 * @param a x coordinate of top left corner of shape
+	 * @param b y coordinate of top left corner of shape
+	 */
 	public static void oval(Graphics pb, int a, int b) {
 		//draw oval
 		//set fill color
@@ -119,6 +142,12 @@ public class HW2Drawing {
 		pb.fillOval(a, b, 75, 75);
 	}
 
+	/**
+	 * polygon draws a polygon at custom coordinates
+	 * @param pb graphics object to draw
+	 * @param a x coordinate of top left corner of shape
+	 * @param b y coordinate of top left corner of shape
+	 */
 	public static void polygon(Graphics pb, int a, int b) {
 		//set fill color
 		pb.setColor(Color.yellow);
@@ -129,6 +158,13 @@ public class HW2Drawing {
 		pb.fillPolygon(xpoints, ypoints, npoints);
 	}
 
+
+	/**
+	 * polygon2 draws a polygon2 at custom coordinates
+	 * @param pb graphics object to draw
+	 * @param a x coordinate of top left corner of shape
+	 * @param b y coordinate of top left corner of shape
+	 */
 	public static void polygon2(Graphics pb, int a, int b) {
 
 		//calculate coordinates
@@ -138,6 +174,12 @@ public class HW2Drawing {
 		pb.fillPolygon(xpoints, ypoints, npoints);
 	}
 
+	/**
+	 * polygon3 draws a polygon3 at custom coordinates
+	 * @param pb graphics object to draw
+	 * @param a x coordinate of top left corner of shape
+	 * @param b y coordinate of top left corner of shape
+	 */
 	public static void polygon3(Graphics pb, int a, int b) {
 
 		//calculate coordinates
